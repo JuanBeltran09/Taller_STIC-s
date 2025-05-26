@@ -9,13 +9,13 @@ services:
     environment:
       - MONGO_URI=mongodb+srv://juan:1234@cluster0.ovhccps.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
-#  estudiantes-api:
-#    image: juan9beltran/estudiantes-api:latest
-#    container_name: estudiantes-api
-#    ports:
-#      - "3002:3000"
-#    environment:
-#      - MONGO_URI=mongodb+srv://juan:1234@cluster0.ovhccps.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+  estudiantes-api:
+    image: juan9beltran/estudiantes-api:latest
+    container_name: estudiantes-api
+    ports:
+      - "3002:3000"
+    environment:
+      - MONGO_URI=mongodb+srv://juan:1234@cluster0.ovhccps.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 #  prestamos-api:
 #    image: juan9beltran/prestamos-api:latest
