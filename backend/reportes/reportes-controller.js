@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Prestamo = require('./models/prestamo'); // importar modelo de préstamo
+const Prestamo = require('./prestamos-model'); // importar modelo de préstamo
 
 // Sala con mayor frecuencia de préstamo
 exports.salaMasUsada = async (req, res) => {
