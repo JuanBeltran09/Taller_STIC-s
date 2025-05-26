@@ -17,18 +17,18 @@ services:
     environment:
       - MONGO_URI=mongodb+srv://juan:1234@cluster0.ovhccps.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
-#  prestamos-api:
-#    image: juan9beltran/prestamos-api:latest
-#    container_name: prestamos-api
-#    ports:
-#      - "3003:3000"
-#    environment:
-#      - MONGO_URI=mongodb+srv://juan:1234@cluster0.ovhccps.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+  prestamos-api:
+    image: juan9beltran/prestamos-api:latest
+    container_name: prestamos-api
+    ports:
+      - "3003:3000"
+    environment:
+      - MONGO_URI=mongodb+srv://juan:1234@cluster0.ovhccps.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
-#  reportes-api:
-#    image: juan9beltran/reportes-api:latest
-#    container_name: reportes-api
-#    ports:
-#      - "3004:3000"
-#    environment:
-#      - MONGO_URI=mongodb+srv://<usuario>:<password>@<cluster>.mongodb.net/reportes-db?retryWrites=true&w=majority&appName=Cluster0
+  reportes-api:
+    image: juan9beltran/reportes-api:latest
+    container_name: reportes-api
+    ports:
+      - "3004:3000"
+    environment:
+      - MONGO_URI=mongodb+srv://<usuario>:<password>@<cluster>.mongodb.net/reportes-db?retryWrites=true&w=majority&appName=Cluster0
