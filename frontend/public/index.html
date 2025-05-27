@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Préstamos de Aulas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Gestión de Préstamos de Aulas</h1>
+
+    <!-- Sección Aulas (CRUD) -->
+    <section>
+      <h2>🏫 CRUD de Aulas</h2>
+      <form id="form-aula">
+        <input type="hidden" id="aula-id">
+        <label for="aula-nombre">Nombre:</label>
+        <input type="text" id="aula-nombre" required>
+        <label for="aula-capacidad">Capacidad:</label>
+        <input type="number" id="aula-capacidad" required>
+        <label for="aula-ubicacion">Ubicación:</label>
+        <input type="text" id="aula-ubicacion" required>
+        <button type="submit" id="btn-guardar-aula">Crear Aula</button>
+        <button type="button" id="btn-cancelar-aula" class="btn-cancel">Cancelar</button>
+      </form>
+      <ul id="lista-aulas"></ul>
+    </section>
+
+    <!-- Sección Estudiantes (CRUD) -->
+    <section>
+      <h2>👨‍🎓 CRUD de Estudiantes</h2>
+      <form id="form-estudiante">
+        <input type="hidden" id="estudiante-id">
+        <label for="estudiante-codigo">Código:</label>
+        <input type="text" id="estudiante-codigo" required>
+        <label for="estudiante-nombre">Nombre:</label>
+        <input type="text" id="estudiante-nombre" required>
+        <label for="estudiante-programa">Programa:</label>
+        <input type="text" id="estudiante-programa" required>
+        <button type="submit" id="btn-guardar-estudiante">Crear Estudiante</button>
+        <button type="button" id="btn-cancelar-estudiante" class="btn-cancel">Cancelar</button>
+      </form>
+      <ul id="lista-estudiantes"></ul>
+    </section>
+
+    <!-- Sección Registrar Préstamo -->
+    <section>
+      <h2>📌 Registrar Préstamo</h2>
+      <form id="form-prestamo">
+        <label for="prestamo-estudiante">Estudiante:</label>
+        <select id="prestamo-estudiante" required>
+          <option value="" disabled selected>Selecciona un estudiante</option>
+        </select>
+
+        <label for="prestamo-aula">Aula:</label>
+        <select id="prestamo-aula" required>
+          <option value="" disabled selected>Selecciona una aula</option>
+        </select>
+
+        <label for="prestamo-fecha">Fecha:</label>
+        <input type="date" id="prestamo-fecha" required>
+
+        <label for="prestamo-motivo">Motivo:</label>
+        <input type="text" id="prestamo-motivo" required>
+
+        <button type="submit" id="btn-guardar-prestamo">Registrar Préstamo</button>
+      </form>
+    </section>
+
+    <!-- Sección Reportes -->
+    <section>
+      <h2>📊 Reportes DTIC’s</h2>
+
+      <!-- Sala que más se ha prestado -->
+      <div class="reporte-block">
+        <h3>🔥 Sala con mayor frecuencia de préstamo</h3>
+        <p id="reporte-sala-mas-usada"></p>
+      </div>
+
+      <!-- Préstamos Semanales -->
+      <div class="reporte-block">
+        <h3>📅 Préstamos Semanales</h3>
+        <ul id="lista-prestamos-semanal"></ul>
+      </div>
+
+      <!-- Préstamos Mensuales -->
+      <div class="reporte-block">
+        <h3>🗓️ Préstamos Mensuales</h3>
+        <ul id="lista-prestamos-mensual"></ul>
+      </div>
+
+      <!-- Estudiantes Frecuentes -->
+      <div class="reporte-block">
+        <h3>⭐ Estudiantes con mayor uso de salas</h3>
+        <ul id="lista-estudiantes-frecuentes"></ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

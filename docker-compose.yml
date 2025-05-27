@@ -32,3 +32,14 @@ services:
       - "3004:3000"
     environment:
       - MONGO_URI=mongodb+srv://juan:1234@cluster0.ovhccps.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+  frontend:
+      image: camiilo03/frontend:latest
+      container_name: frontend
+      ports:
+      - "3000:3000"
+      depends_on:
+      - aulas-api
+      - estudiantes-api
+      - prestamos-api
+      - reportes-api
